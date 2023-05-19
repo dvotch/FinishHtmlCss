@@ -1,0 +1,38 @@
+.price-services {
+  font-size: 14px;
+  margin-top: 48px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: 16px;
+    width: 224px;
+    height: 200px;
+  }
+  &__about-NDS {
+    margin-top: 42px;
+    width: 260px;
+    line-height: 20px;
+    text-align: left;
+    margin-left: 16px;
+    letter-spacing: 0.2px;
+  }
+  &__commercial-proposal {
+    margin-top: 16px;
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 16px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: url("../img/arrow-pink.svg");
+      left: 110px;
+      top: 26px;
+    }
+  }
+  &__swiper {
+    margin-left: -8px;
+  }
+}

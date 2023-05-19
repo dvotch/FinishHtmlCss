@@ -3,16 +3,29 @@
 @import "vendor";
 @import "vars";
 @import "settings";
+@import "header";
+@import "site-container";
+@import "services";
+@import "swiper";
+@import "item";
+@import "repair";
+@import "brands";
+@import "kinds";
+@import "price-services";
+@import "footer";
+@import "swiper-min";
 
-
-.header {
-  text-align: center;
-  & img {
-    width: 30%;
-  }
+.inner {
+  position: relative;
 }
 
-.welcome-title {
-  margin-top: 50px;
-  font-size: 6em;
+.section {
+  &__title {
+    font-family: "TT Lakes Regular";
+    font-size: 16px;
+    line-height: 24px;
+    background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 98.61%);
+    padding: 16px 16px;
+    color: $menu-text-color;
+  }
 }

@@ -1,0 +1,59 @@
+.swiper-slide-service {
+  display: inline-block;
+  padding: 6px 13px 8px 13px;
+  letter-spacing: -0.2px;
+  background: linear-gradient(
+    270deg,
+    #f8f8f8 16.84%,
+    rgba(248, 248, 248, 0.0001) 100%
+  );
+  &_active {
+    border-radius: 6px;
+    border: 2px solid $border-color;
+    background: $white;
+  }
+  & button {
+    font-family: "TT Lakes Medium", sans-serif;
+    font-style: medium;
+    font-size: 16px;
+    color: $menu-text-color;
+  }
+}
+.kinds__swiper {
+  + .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 105%;
+  }
+}
+.brands__swiper {
+  + .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 115%;
+  }
+}
+.price-services__swiper {
+  + .swiper-pagination-bullets.swiper-pagination-horizontal {
+    top: 105%;
+  }
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets {
+  & .swiper-pagination-bullet {
+    margin-left: 8px;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $pagination-color;
+  &-active {
+    background-color: $pagination-active;
+  }
+}
+
+.kinds__swiper,
+.brands__swiper {
+  margin-left: 16px !important;
+}
+.price-services__swiper {
+  margin-left: 8px !important;
+}

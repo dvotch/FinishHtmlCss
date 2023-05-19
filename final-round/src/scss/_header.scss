@@ -1,0 +1,18 @@
+@import "vars";
+
+.header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $white;
+
+  &__stick {
+    width: 2px;
+    height: 32px;
+    background-color: $light-gray;
+  }
+}
