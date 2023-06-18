@@ -7,4 +7,16 @@
     height: 72px;
     align-items: center;
   }
+  
+  @include tablets {
+    &__item {
+      width: 224px;
+      &_hp_8px {
+        padding-left: 8px;
+      }
+    }
+    &__see-more {
+      left: -16px;
+    }
+  }
 }

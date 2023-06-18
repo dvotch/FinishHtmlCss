@@ -1,18 +1,37 @@
-@import "vars";
-
 .header {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-left: 16px;
-  padding-right: 16px;
+  @include flex-align(space-between, center);
+  padding: 20px 16px 16px 16px;
   background-color: $white;
-
+  &__left-group,
+  &__right-group,
+  &__right-group_disable {
+    @include flex-align(space-between, center);
+    gap: 16px;
+  }
+  &__right-group_disable {
+    display: none;
+  }
   &__stick {
     width: 2px;
     height: 32px;
     background-color: $light-gray;
   }
+  .header__stick:nth-child(1) {
+    display: none;
+  }
+
+  @include tablets {
+    &__right-group_disable {
+      display: flex;
+    }
+    padding-left: 24px;
+    padding-right: 24px;
+
+    &__stick {
+      margin: 0 4px;
+    }
+  }
+  //@media (min-width: 1440px) {
+  //  width: 1440px;
+  //}
 }

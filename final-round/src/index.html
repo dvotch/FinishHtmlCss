@@ -5,28 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <title>new site</title>
-  <script type="module">
-    import swiper from 'https://cdn.jsdelivr.net/npm/swiper@9.3.2/+esm'
-    </script>
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
 />
+
 </head>
 <body>
+  
   <div class="site-container">
     <header class="header">
-      <button type="button" class="header__button">
-        <img src="./img/header-menu.webp" />
-      </button>
-      <img src="./img/header-logo.webp" class="header__logo" />
-      <div class="header__stick"></div>
-      <button type="button" class="header__button">
-        <img src="./img/header-repair.webp" />
-      </button>
-      <button type="button" class="header__button">
-        <img src="./img/header-check-status.webp" />
-      </button>
+      <div class="header__left-group">
+        <button type="button" class="header__button">
+          <img src="./img/header-menu.webp" />
+        </button>
+        <div class="header__stick"></div>
+        <img src="./img/header-logo.webp" class="header__logo" />
+      </div>
+      <div class="header__right-group">
+        <div class="header__right-group_disable">
+          <button type="button" class="header__button">
+            <img src="./img/header-call.svg" />
+          </button>
+          <button type="button" class="header__button">
+            <img src="./img/header-chat.svg" />
+          </button>
+          <button type="button" class="header__button">
+            <img src="./img/header-profile.svg" />
+          </button>
+        </div>
+        <div class="header__stick"></div>
+        <button type="button" class="header__button">
+          <img src="./img/header-repair.webp" />
+        </button>
+        <button type="button" class="header__button">
+          <img src="./img/header-check-status.webp" />
+        </button>
+      </div>
+      
     </header>
     <main class="main">
       <section class="services">
@@ -44,7 +60,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="swiper-slide-service">
-                  <button type="button">Дополнительные услуги</button>
+                  <button type="button">Дополнительные услуги </button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -54,12 +70,12 @@
               </div>
               <div class="swiper-slide">
                 <div class="swiper-slide-service">
-                  <button type="button">Адреса сервисных центров</button>
+                  <button type="button">Специальные цены</button>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="swiper-slide-service">
-                  <button type="button">Специальные цены</button>
+                  <button type="button">Адреса сервисных центров</button>
                 </div>
               </div>
               <div class="swiper-slide">
@@ -70,9 +86,9 @@
             </div>
           </div>
           <div class="services__text">
-            Мы являемся авторизованным сервисным центром по ремонту техники
-            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.
+            Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+
+<br><br>Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
           </div>
           <button type="button" class="services__read-more">
             Читать далее
@@ -116,35 +132,37 @@
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="brands__item item" href="#">
-                    <img class="item__logo" src="img/acer_logo.webp" />
-                    <button href="#" class="item__arrow"></button>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a class="brands__item item" href="#">
+                  <a class="brands__item item brands__item_hp_8px" href="#">
                     <img class="item__logo" src="img/hp_logo.webp" />
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a class="brands__item item" href="#">
-                    <img class="item__logo" src="img/viewSonic_logo.webp" />
+                    <img class="item__logo" src="img/acer_logo.webp" />
+                    <button href="#" class="item__arrow"></button>
+                  </a>
+                </div>
+                
+                <div class="swiper-slide">
+                  <a class="brands__item item item_disabled" href="#">
+                    <img class="item__logo " src="img/viewSonic_logo.webp" />
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="brands__item item" href="#">
+                  <a class="brands__item item item_disabled" href="#">
                     <img class="item__logo" src="./img/sony_logo.webp" />
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="brands__item item" href="#">
+                  <a class="brands__item item item_disabled" href="#">
                     <img class="item__logo" src="img/lenovo_logo.webp" />
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
+                <button type="button" class="brands__see-more brands__see-more_disabled see-more">Показать все</button>
               </div>
             </div>
             <div
@@ -180,41 +198,42 @@
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="kinds__item item" href="#">
+                  <a class="kinds__item item kinds__item_disabled" href="#">
                     Ремонт ноутбуков
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="kinds__item item" href="#">
+                  <a class="kinds__item item kinds__item_disabled" href="#">
                     Ремонт планшетов
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="kinds__item item" href="#">
+                  <a class="kinds__item item kinds__item_disabled" href="#">
                     Ремонт ПК
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="kinds__item item" href="#">
+                  <a class="kinds__item item kinds__item_disabled" href="#">
                     Ремонт ноутбуков
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="kinds__item item" href="#">
+                  <a class="kinds__item item kinds__item_disabled" href="#">
                     Ремонт планшетов
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
                 <div class="swiper-slide">
-                  <a class="kinds__item item" href="#">
+                  <a class="kinds__item item kinds__item_disabled" href="#">
                     Ремонт ПК
                     <button href="#" class="item__arrow"></button>
                   </a>
                 </div>
+                <button type="button" class="kinds__see-more kinds__see-more_disabled see-more">Показать все</button>
               </div>
             </div>
             <!-- If we need pagination -->
@@ -236,67 +255,75 @@
             >
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">
-                  <a class="price-services__item item" href="#">
-                    <div class="item__title">Ремонтные услуги</div>
-                    <div class="item__title-text">
-                      Тестирование с выдачей технического заключения
-                    </div>
-                    <div class="item__title">Цена</div>
-                    <div class="item__title-text">Бесплатно</div>
-                    <div class="item__title">Срок</div>
-                    <div class="item__title-text">30-120 мин</div>
-                    <button class="item__button">ЗАКАЗАТЬ</button>
-                  </a>
+                <div class="price-services__row">
+                  <div class="price-services__column">Ремонтные услуги
+                  </div>
+                  <div class="price-services__column">Цена
+                  </div>
+                  <div class="price-services__column">Срок
+                  </div>
                 </div>
                 <div class="swiper-slide">
                   <a class="price-services__item item" href="#">
-                    <div class="item__title">Ремонтные услуги</div>
+                    <div class="item__title item__title_disabled">Ремонтные услуги</div>
                     <div class="item__title-text">
                       Диагностика
                     </div>
-                    <div class="item__title">Цена</div>
+                    <div class="item__title item__title_disabled">Цена</div>
                     <div class="item__title-text">Бесплатно</div>
-                    <div class="item__title">Срок</div>
+                    <div class="item__title item__title_disabled">Срок</div>
+                    <div class="item__title-text">30 мин</div>
+                    <button class="item__button">ЗАКАЗАТЬ</button>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a class="price-services__item item" href="#">
+                    <div class="item__title item__title_disabled">Ремонтные услуги</div>
+                    <div class="item__title-text">
+                      Замена дисплея
+                    </div>
+                    <div class="item__title item__title_disabled">Цена</div>
+                    <div class="item__title-text">1 000 ₽</div>
+                    <div class="item__title item__title_disabled">Срок</div>
                     <div class="item__title-text">30-120 мин</div>
                     <button class="item__button">ЗАКАЗАТЬ</button>
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a class="price-services__item item" href="#">
-                    <div class="item__title">Ремонтные услуги</div>
+                    <div class="item__title item__title_disabled">Ремонтные услуги</div>
                     <div class="item__title-text">
-                      Тестирование с выдачей технического заключения
+                      Замена полифонического динамика
                     </div>
-                    <div class="item__title">Цена</div>
-                    <div class="item__title-text">Бесплатно</div>
-                    <div class="item__title">Срок</div>
+                    <div class="item__title item__title_disabled">Цена</div>
+                    <div class="item__title-text">1 000 ₽</div>
+                    <div class="item__title item__title_disabled">Срок</div>
                     <div class="item__title-text">30-120 мин</div>
                     <button class="item__button">ЗАКАЗАТЬ</button>
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a class="price-services__item item" href="#">
-                    <div class="item__title">Ремонтные услуги</div>
+                    <div class="item__title item__title_disabled">Ремонтные услуги</div>
                     <div class="item__title-text">
                       Тестирование с выдачей технического заключения
                     </div>
-                    <div class="item__title">Цена</div>
-                    <div class="item__title-text">Бесплатно</div>
-                    <div class="item__title">Срок</div>
+                    <div class="item__title item__title_disabled">Цена</div>
+                    <div class="item__title-text">1 000 ₽</div>
+                    <div class="item__title item__title_disabled">Срок</div>
                     <div class="item__title-text">30-120 мин</div>
                     <button class="item__button">ЗАКАЗАТЬ</button>
                   </a>
                 </div>
                 <div class="swiper-slide">
                   <a class="price-services__item item" href="#">
-                    <div class="item__title">Ремонтные услуги</div>
+                    <div class="item__title item__title_disabled">Ремонтные услуги</div>
                     <div class="item__title-text">
-                      Тестирование с выдачей технического заключения
+                      Замена программного обеспечения
                     </div>
-                    <div class="item__title">Цена</div>
-                    <div class="item__title-text">Бесплатно</div>
-                    <div class="item__title">Срок</div>
+                    <div class="item__title item__title_disabled">Цена</div>
+                    <div class="item__title-text">1 000 ₽</div>
+                    <div class="item__title item__title_disabled">Срок</div>
                     <div class="item__title-text">30-120 мин</div>
                     <button class="item__button" type="button">
                       <span>ЗАКАЗАТЬ</span>
@@ -317,18 +344,15 @@
           постоянное обслуживание, оставьте заявку.
         </div>
         <button class="price-services__commercial-proposal">
-          Получить коммерческое<br />
+          Получить коммерческое
           предложение
         </button>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__text">
-        © 2019 CPS<br />Разработано командой Apesong <br /><br />
-        Политика конфиденциальности
-        <br /><br />
-        Информация, размещенная на данной странице, не является публичной
-        офертой
+      <div class="footer__item">© 2019 CPS <br>Разработано командой Apesong</div>
+      <div class="footer__item">Политика конфиденциальности</div>
+      <div class="footer__item">Информация, размещенная на данной странице, не является публичной офертой</div>
       </div>
     </footer>
   </div>
@@ -336,5 +360,6 @@
   </div>
   <script src="./js/swiper-bundle.min.js"></script>
   <script src="./js/swipers.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>

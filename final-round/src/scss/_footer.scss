@@ -1,5 +1,5 @@
 .footer {
-  margin-top: 48px;
+  margin-top: 47px;
   border-top: 1px solid $border-color;
   background-color: $background;
   color: $menu-text-color;
@@ -8,7 +8,36 @@
   line-height: 16px;
   letter-spacing: 0px;
   text-align: center;
-  &__text {
+  display: flex;
+  flex-direction: column;
+  padding-right: 0px;
+  &__item {
+    margin-left: 52px;
     margin-top: 16px;
+    opacity: 0.72;
+    width: 218px;
+    &:last-child {
+      width: 312px;
+      margin-left: 0;
+    }
+  }
+  @include tablets {
+    margin-top: 47px;
+    flex-direction: row;
+    &__item {
+      letter-spacing: -0.2px;
+      padding-top: 16px;
+      margin-left: 8px;
+      &:first-child {
+        text-align: left;
+        width: 240px;
+        margin-left: 24px;
+      }
+      &:last-child {
+        text-align: right;
+        margin-left: 32px;
+        width: 213px;
+      }
+    }
   }
 }

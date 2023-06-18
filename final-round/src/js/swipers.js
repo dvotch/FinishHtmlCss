@@ -1,9 +1,17 @@
 const swiperServices = new Swiper(".services__swiper", {
   slidesPerView: 1,
   spaceBetween: -50,
+  breakpoints: {
+    // when window width is >= 320px
+    321: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+  },
 });
 
 const swiperBrands = new Swiper(".brands__swiper", {
+  init: false,
   spaceBetween: -50,
   pagination: {
     el: "#brands__swiper-pagination",
@@ -13,6 +21,7 @@ const swiperBrands = new Swiper(".brands__swiper", {
 });
 
 const swiperKinds = new Swiper(".kinds__swiper", {
+  init: false,
   spaceBetween: -50,
   pagination: {
     el: "#kinds__swiper-pagination",
@@ -22,6 +31,7 @@ const swiperKinds = new Swiper(".kinds__swiper", {
 });
 
 const swiperPriceServices = new Swiper(".price-services__swiper", {
+  init: false,
   spaceBetween: -35,
   pagination: {
     el: "#price-services-pagination",
@@ -29,3 +39,21 @@ const swiperPriceServices = new Swiper(".price-services__swiper", {
     type: "bullets",
   },
 });
+
+if (matchMedia("(max-width: 320px)").matches) {
+  swiperBrands.init();
+  swiperKinds.init();
+  swiperPriceServices.init();
+} else {
+  deleteSwipers();
+}
+
+function deleteSwipers() {
+  const swipers = document.querySelectorAll(".swiper");
+  const swipersWrapper = document.querySelectorAll(".swiper-wrapper");
+  const swipersSlides = document.querySelectorAll(".swiper-slide");
+  for (let i = 1; i < swipers.length; i++) {
+    swipersWrapper[i].outerHTML = swipersWrapper[i].innerHTML;
+    swipers[i].outerHTML = swipers[i].innerHTML;
+  }
+}

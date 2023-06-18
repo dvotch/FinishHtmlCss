@@ -11,15 +11,31 @@
     box-shadow: 10px 5px 10px black;
     transition: 1s;
   }
+
   .kinds__item &__arrow {
     top: 85px;
   }
   &__title {
     color: $menu-text-color;
     margin-top: 18px;
+
+    @include tablets {
+      margin-top: 0;
+      &_disabled {
+        @include visually-hidden;
+      }
+    }
   }
   &__title-text {
     margin-top: 5px;
+    @include tablets {
+      position: relative;
+      margin-top: 0;
+      background-color: $white;
+      padding: 23px 0 23px 14px;
+      line-height: 18px;
+      letter-spacing: 0.2px;
+    }
   }
   &__button {
     padding: 4px 0;
@@ -42,12 +58,22 @@
       content: url("../img/arrow-white.svg");
       right: 18px;
     }
+    @include tablets {
+      height: 32px;
+      right: 20px;
+      padding-left: 6px;
+      &::after {
+        position: absolute;
+        content: url("../img/arrow-white.svg");
+        right: 16px;
+      }
+    }
   }
   &__arrow {
     position: relative;
     background-color: inherit;
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border: 2px solid $button-arrow;
     border-radius: 20px;
     &::before {
@@ -70,6 +96,11 @@
     }
     &:hover {
       background-color: #efe9f0;
+    }
+  }
+  &_disabled {
+    @include tablets {
+      @include visually-hidden;
     }
   }
 }

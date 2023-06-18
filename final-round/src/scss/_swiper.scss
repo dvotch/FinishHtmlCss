@@ -1,7 +1,8 @@
 .swiper-slide-service {
   display: inline-block;
-  padding: 6px 13px 8px 13px;
+  padding: 8px 8px 8px 8px;
   letter-spacing: -0.2px;
+  white-space: nowrap;
   background: linear-gradient(
     270deg,
     #f8f8f8 16.84%,
@@ -11,17 +12,63 @@
     border-radius: 6px;
     border: 2px solid $border-color;
     background: $white;
+    padding-left: 16px;
   }
   & button {
     font-family: "TT Lakes Medium", sans-serif;
+    flex-wrap: nowrap;
+    display: flex;
+    width: auto;
     font-style: medium;
     font-size: 16px;
     color: $menu-text-color;
   }
 }
+.services__swiper {
+  & .swiper-slide {
+    @include tablets {
+      flex-shrink: 1;
+    }
+  }
+}
+.inner {
+  & .swiper-slide {
+    @include tablets {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.price-services {
+  & .swiper-slide {
+    width: 100%;
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: 372px 96px 1fr;
+  }
+  @include tablets {
+    & .swiper-slide {
+      margin-top: 0px;
+      position: relative;
+      &::after {
+        bottom: 2px;
+        left: 16px;
+        content: "";
+        width: 688px;
+        height: 1px;
+        background-color: $item-border;
+        position: absolute;
+      }
+      &:nth-child(6)::after {
+        display: none;
+      }
+    }
+  }
+}
 .kinds__swiper {
   + .swiper-pagination-bullets.swiper-pagination-horizontal {
-    top: 105%;
+    top: 110%;
   }
 }
 .brands__swiper {
@@ -31,7 +78,7 @@
 }
 .price-services__swiper {
   + .swiper-pagination-bullets.swiper-pagination-horizontal {
-    top: 105%;
+    top: 108%;
   }
 }
 

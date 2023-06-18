@@ -17,8 +17,28 @@
 
 .inner {
   position: relative;
+  @include tablets {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 16px;
+    margin-left: 14px;
+    margin-top: 24px;
+  }
 }
-
+.price-services {
+  & .inner {
+    row-gap: 20px;
+  }
+  @include tablets {
+    & .inner {
+      row-gap: 0px;
+      margin-left: 16px;
+      width: 720px;
+      position: relative;
+    }
+  }
+}
 .section {
   &__title {
     font-family: "TT Lakes Regular";
@@ -27,5 +47,19 @@
     background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 98.61%);
     padding: 16px 16px;
     color: $menu-text-color;
+  }
+}
+.main {
+  @media (min-width: 321px) {
+  }
+}
+.see-more {
+  position: relative;
+  top: 12px;
+  font-family: "TT Lakes Medium";
+  &::after {
+    position: absolute;
+    left: -24px;
+    content: url(../img/read-more.webp);
   }
 }

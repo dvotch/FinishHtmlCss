@@ -2,8 +2,16 @@
   letter-spacing: -0.2px;
   &__brands {
     margin-top: 20px;
+    @include tablets {
+      margin-top: 48px;
+      margin-left: 10px;
+    }
   }
   &__kinds {
     margin-top: 48px;
+    @include tablets {
+      margin-top: 46px;
+      margin-left: 10px;
+    }
   }
 }

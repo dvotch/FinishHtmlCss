@@ -1,8 +1,8 @@
 .services {
   position: relative;
-  padding-top: 43px;
+  padding-top: 26px;
   &__container {
-    margin-left: 17px;
+    margin-left: 16px;
   }
   &__title {
     font-family: "TT Lakes Bold";
@@ -11,13 +11,14 @@
     font-size: 28px;
     line-height: 40px;
     letter-spacing: -0.8px;
+    margin-right: -4px;
 
     &::before {
       position: absolute;
       width: 4px;
       height: 40px;
       content: "";
-      left: -16px;
+      left: -5%;
       background-color: #41f6d7;
     }
   }
@@ -35,14 +36,16 @@
   }
   &__text {
     width: 288px;
+    height: 90px;
     margin-top: 26px;
     font-family: "TT Lakes Regular";
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
+    overflow: hidden;
   }
   &__read-more {
-    margin-top: 16px;
+    margin-top: 12px;
     margin-left: 32px;
     position: relative;
     font-family: "TT Lakes Medium";
@@ -58,5 +61,29 @@
   }
   &__img {
     margin-top: 16px;
+  }
+  @include tablets {
+    padding-left: 24px;
+    &__container {
+      margin-left: 0px;
+    }
+    &__swiper {
+      margin-top: 32px;
+    }
+    &__text {
+      margin-top: 32px;
+      width: 312px;
+      height: 160px;
+      line-height: 20px;
+    }
+    &__read-more {
+      margin-top: 8px;
+    }
+    &__img {
+      position: absolute;
+      right: 40px;
+      bottom: 0;
+      transform: scale(1.15);
+    }
   }
 }

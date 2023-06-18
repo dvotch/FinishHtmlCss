@@ -1,11 +1,11 @@
 .price-services {
   font-size: 14px;
-  margin-top: 48px;
+  margin-top: 52px;
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    margin-top: 16px;
+    margin-top: 8px;
     width: 224px;
     height: 200px;
   }
@@ -25,6 +25,7 @@
     text-align: left;
     margin-left: 16px;
     position: relative;
+    width: 192px;
     &::after {
       position: absolute;
       content: url("../img/arrow-pink.svg");
@@ -34,5 +35,37 @@
   }
   &__swiper {
     margin-left: -8px;
+  }
+  @include tablets {
+    margin-left: 8px;
+    margin-top: 48px;
+    &__row {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: 372px 96px 1fr;
+    }
+    &__column {
+      margin-left: 16px;
+      margin-bottom: 16px;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__about-NDS {
+      margin-top: 24px;
+      width: 421px;
+    }
+    &__commercial-proposal {
+      width: 292px;
+      letter-spacing: -0.2px;
+      &::after {
+        position: absolute;
+        content: url("../img/arrow-pink.svg");
+        left: 300px;
+        top: 0;
+      }
+    }
   }
 }
