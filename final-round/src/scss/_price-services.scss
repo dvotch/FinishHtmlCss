@@ -68,4 +68,18 @@
       }
     }
   }
+  @include desktop {
+    margin-top: 66px;
+    & .item__button {
+      right: 32px;
+    }
+    &__row {
+      margin-top: 8px;
+      display: grid;
+      grid-template-columns: 472px 228px 1fr;
+    }
+    &__about-NDS {
+      margin-top: 32px;
+    }
+  }
 }

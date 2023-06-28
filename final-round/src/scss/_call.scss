@@ -1,0 +1,28 @@
+.call {
+  &__modal {
+    position: absolute;
+    width: 320px;
+    height: 676px;
+    background-color: $white;
+    padding-left: 16px;
+    padding-top: 24px;
+    z-index: 5;
+    cursor: pointer;
+    & .item__button {
+      position: relative;
+      top: 4px;
+      left: 152px;
+      width: 136px;
+      height: 32px;
+      padding-left: 8px;
+      cursor: pointer;
+    }
+    @include tablets {
+      height: 100vh;
+    }
+    @include desktop {
+      width: 440px;
+      height: 100vh;
+    }
+  }
+}

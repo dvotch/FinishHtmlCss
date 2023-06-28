@@ -44,15 +44,17 @@ if (matchMedia("(max-width: 320px)").matches) {
   swiperBrands.init();
   swiperKinds.init();
   swiperPriceServices.init();
+} else if (matchMedia("(max-width: 768px)").matches) {
+  deleteSwipers(1);
 } else {
-  deleteSwipers();
+  deleteSwipers(0);
 }
 
-function deleteSwipers() {
+function deleteSwipers(countSwipers) {
   const swipers = document.querySelectorAll(".swiper");
   const swipersWrapper = document.querySelectorAll(".swiper-wrapper");
-  const swipersSlides = document.querySelectorAll(".swiper-slide");
-  for (let i = 1; i < swipers.length; i++) {
+  const swipersSlide = document.querySelectorAll(".swiper-slide");
+  for (let i = countSwipers; i < swipers.length; i++) {
     swipersWrapper[i].outerHTML = swipersWrapper[i].innerHTML;
     swipers[i].outerHTML = swipers[i].innerHTML;
   }

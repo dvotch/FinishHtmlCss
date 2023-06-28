@@ -2,9 +2,16 @@
   letter-spacing: -0.2px;
   &__brands {
     margin-top: 20px;
+
     @include tablets {
       margin-top: 48px;
       margin-left: 10px;
+      & .inner {
+        margin-left: 12px;
+      }
+    }
+    @include desktop {
+      margin-top: 152px;
     }
   }
   &__kinds {
@@ -12,6 +19,12 @@
     @include tablets {
       margin-top: 46px;
       margin-left: 10px;
+      & .inner {
+        margin-left: 16px;
+      }
+    }
+    @include desktop {
+      margin-top: 64px;
     }
   }
 }

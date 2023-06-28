@@ -24,11 +24,9 @@
     color: $menu-text-color;
   }
 }
-.services__swiper {
-  & .swiper-slide {
-    @include tablets {
-      flex-shrink: 1;
-    }
+.services .inner .swiper-slide {
+  @include desktop {
+    width: min-content !important;
   }
 }
 .inner {
@@ -36,7 +34,14 @@
     @include tablets {
       width: fit-content;
       display: flex;
-      align-items: center;
+      align-items: top;
+    }
+  }
+}
+.services__swiper {
+  & .swiper-slide {
+    @include tablets {
+      flex-shrink: 1;
     }
   }
 }
@@ -46,6 +51,9 @@
     margin-top: 8px;
     display: grid;
     grid-template-columns: 372px 96px 1fr;
+    @include desktop {
+      grid-template-columns: 472px 228px 1fr;
+    }
   }
   @include tablets {
     & .swiper-slide {

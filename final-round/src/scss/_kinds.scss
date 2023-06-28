@@ -17,7 +17,12 @@
       }
     }
     &__see-more {
-      left: -88px;
+      left: -116px;
+    }
+  }
+  @include desktop {
+    &__item {
+      width: 240px;
     }
   }
 }

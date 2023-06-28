@@ -11,6 +11,10 @@
   display: flex;
   flex-direction: column;
   padding-right: 0px;
+  @include desktop {
+    grid-area: C;
+    margin-top: 52px;
+  }
   &__item {
     margin-left: 52px;
     margin-top: 16px;
@@ -22,7 +26,6 @@
     }
   }
   @include tablets {
-    margin-top: 47px;
     flex-direction: row;
     &__item {
       letter-spacing: -0.2px;
@@ -37,6 +40,21 @@
         text-align: right;
         margin-left: 32px;
         width: 213px;
+      }
+    }
+  }
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-between;
+    &__item {
+      &:first-child {
+        text-align: left;
+        width: 218px;
+      }
+      &:last-child {
+        text-align: right;
+        width: 320px;
+        margin-right: 36px;
       }
     }
   }

@@ -2,6 +2,9 @@
   @include flex-align(space-between, center);
   padding: 20px 16px 16px 16px;
   background-color: $white;
+  &__button {
+    cursor: pointer;
+  }
   &__left-group,
   &__right-group,
   &__right-group_disable {
@@ -31,7 +34,4 @@
       margin: 0 4px;
     }
   }
-  //@media (min-width: 1440px) {
-  //  width: 1440px;
-  //}
 }

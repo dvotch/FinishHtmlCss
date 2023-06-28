@@ -1,10 +1,30 @@
 .services {
   position: relative;
   padding-top: 26px;
+  &__button-text {
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    margin-right: 8px;
+    align-items: center;
+    display: flex;
+    color: $main-text-color;
+  }
+  &__buttons > .header__button {
+    margin-right: 34px;
+  }
   &__container {
     margin-left: 16px;
   }
   &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buttons {
+    margin-top: 16px;
+    display: none;
+    justify-content: space-between;
+  }
+  &__title-text {
     font-family: "TT Lakes Bold";
     position: relative;
     font-style: bold;
@@ -20,6 +40,9 @@
       content: "";
       left: -5%;
       background-color: #41f6d7;
+    }
+    @include desktop {
+      margin-top: 16px;
     }
   }
   &__shadow {
@@ -68,22 +91,55 @@
       margin-left: 0px;
     }
     &__swiper {
-      margin-top: 32px;
+      margin-top: 8px;
     }
     &__text {
       margin-top: 32px;
       width: 312px;
       height: 160px;
       line-height: 20px;
+      overflow: hidden;
+
+      @include desktop {
+        width: 490px;
+        height: 160px;
+        margin-top: 16px;
+      }
+    }
+    &__title-text {
+      &::before {
+        position: absolute;
+        width: 4px;
+        height: 40px;
+        content: "";
+        left: -11%;
+        background-color: #41f6d7;
+      }
     }
     &__read-more {
+      cursor: pointer;
       margin-top: 8px;
+      @include desktop {
+        margin-top: 12px;
+      }
     }
     &__img {
       position: absolute;
       right: 40px;
-      bottom: 0;
+      top: 170px;
       transform: scale(1.15);
+      @include desktop {
+        transform: scale(1.67);
+        bottom: -30px;
+        right: 130px;
+      }
+    }
+  }
+  @include desktop {
+    padding-left: 32px;
+    &__swiper .swiper-wrapper {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 }

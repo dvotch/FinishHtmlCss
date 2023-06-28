@@ -1,0 +1,52 @@
+.modal {
+  padding-top: 20px;
+  &__title {
+    font-family: "TT Lakes Bold";
+    font-size: 24px;
+    letter-spacing: -0.6px;
+    line-height: 32px;
+    margin-top: 36px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 4px;
+      height: 40px;
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: $turquoise;
+      position: absolute;
+      left: -16px;
+    }
+  }
+  &__input {
+    font-size: 16px;
+    width: 288px;
+    height: 48px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid $item-border;
+  }
+  &__textarea {
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid $item-border;
+    width: 288px;
+    height: 118px;
+    padding-left: 16px;
+    padding-top: 16px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  &__text {
+    width: 280px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  &__akcent {
+    color: $button-arrow;
+  }
+}

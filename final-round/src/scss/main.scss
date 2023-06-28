@@ -14,7 +14,27 @@
 @import "price-services";
 @import "footer";
 @import "swiper-min";
+@import "burger";
+@import "nav";
+@import "modal";
+@import "feedback";
+@import "call";
 
+.disable {
+  @include visually-hidden;
+}
+body.lock {
+  overflow: hidden;
+}
+.wrapper {
+  margin: 0 auto;
+}
+.main {
+  @include desktop {
+    width: 1120px;
+    grid-area: B;
+  }
+}
 .inner {
   position: relative;
   @include tablets {
@@ -22,8 +42,30 @@
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 16px;
+    margin-left: 0px;
+    margin-top: 24px;
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 16px;
     margin-left: 14px;
     margin-top: 24px;
+  }
+}
+.repair__brands .inner,
+.repair__kinds .inner {
+  @include desktop {
+    column-gap: 32px;
+  }
+}
+.services .inner {
+  @include desktop {
+    margin-top: 6px;
+    margin-left: 6px;
+    column-gap: 8px;
+    row-gap: 8px;
   }
 }
 .price-services {
@@ -38,6 +80,12 @@
       position: relative;
     }
   }
+  @include desktop {
+    & .inner {
+      width: 1056px;
+      margin-left: 28px;
+    }
+  }
 }
 .section {
   &__title {
@@ -47,10 +95,6 @@
     background: linear-gradient(270deg, #ffffff 0%, #f8f8f8 98.61%);
     padding: 16px 16px;
     color: $menu-text-color;
-  }
-}
-.main {
-  @media (min-width: 321px) {
   }
 }
 .see-more {

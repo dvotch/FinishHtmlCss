@@ -1,0 +1,24 @@
+.nav {
+  &__element {
+    font-family: "TT Lakes Medium";
+    font-size: 16px;
+    line-height: 24px;
+
+    &_active {
+      position: relative;
+      color: $menu-text-color;
+      &::before {
+        content: "";
+        width: 4px;
+        height: 32px;
+        background-color: $turquoise;
+        position: absolute;
+        top: -4px;
+        left: -16px;
+        @include tablets {
+          left: -24px;
+        }
+      }
+    }
+  }
+}
